@@ -1,3 +1,17 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>HEC Dashboard Gamified</title>
+<style>
+table, th, td { border: 1px solid black; border-collapse: collapse; }
+th, td { padding: 5px; text-align: center; }
+tr:hover { background-color: #f2f2f2; cursor: pointer; }
+</style>
+</head>
+<body>
+<h2>HEC Dashboard - 2025-10-11</h2>
+<h3>Map</h3>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,7 +31,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_9f502c231f456f908417228eaa2d7167 {
+                #map_d28c191c585c7fee7a1ef5ca1d0818ec {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -50,166 +64,26 @@
             </script>
 
         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
 </head>
 <body>
     
     
-    <h3>Prediction Table & Feedback</h3>
-    <div style='overflow-x:auto; max-height:600px;'>
-    <table border='1' style='border-collapse: collapse; width: 100%;'>
-    <tr>
-        <th>#</th><th>Latitude</th><th>Longitude</th><th>Predicted Count</th><th>Probability</th><th>Feedback</th>
-    </tr>
-    
-        <tr>
-            <td>1</td>
-            <td>26.923833</td>
-            <td>92.827491</td>
-            <td>2</td>
-            <td>1</td>
-            <td><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=2&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Submit Feedback</a></td>
-        </tr>
-        
-        <tr>
-            <td>2</td>
-            <td>26.92443</td>
-            <td>92.827891</td>
-            <td>5</td>
-            <td>1</td>
-            <td><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=5&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Submit Feedback</a></td>
-        </tr>
-        
-        <tr>
-            <td>3</td>
-            <td>26.831621</td>
-            <td>92.679665</td>
-            <td>5</td>
-            <td>1</td>
-            <td><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=5&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Submit Feedback</a></td>
-        </tr>
-        
-        <tr>
-            <td>4</td>
-            <td>26.831623</td>
-            <td>92.738419</td>
-            <td>1</td>
-            <td>1</td>
-            <td><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Submit Feedback</a></td>
-        </tr>
-        
-        <tr>
-            <td>5</td>
-            <td>26.778011</td>
-            <td>92.76293</td>
-            <td>1</td>
-            <td>1</td>
-            <td><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Submit Feedback</a></td>
-        </tr>
-        
-        <tr>
-            <td>6</td>
-            <td>26.838061</td>
-            <td>92.721425</td>
-            <td>1</td>
-            <td>1</td>
-            <td><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Submit Feedback</a></td>
-        </tr>
-        
-        <tr>
-            <td>7</td>
-            <td>26.92443</td>
-            <td>92.827891</td>
-            <td>1</td>
-            <td>1</td>
-            <td><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Submit Feedback</a></td>
-        </tr>
-        
-        <tr>
-            <td>8</td>
-            <td>26.861823</td>
-            <td>92.767892</td>
-            <td>1</td>
-            <td>1</td>
-            <td><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Submit Feedback</a></td>
-        </tr>
-        
-        <tr>
-            <td>9</td>
-            <td>26.875783</td>
-            <td>92.786516</td>
-            <td>1</td>
-            <td>1</td>
-            <td><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Submit Feedback</a></td>
-        </tr>
-        
-        <tr>
-            <td>10</td>
-            <td>26.92443</td>
-            <td>92.827891</td>
-            <td>1</td>
-            <td>1</td>
-            <td><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Submit Feedback</a></td>
-        </tr>
-        
-        <tr>
-            <td>11</td>
-            <td>26.889438</td>
-            <td>92.806813</td>
-            <td>1</td>
-            <td>1</td>
-            <td><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Submit Feedback</a></td>
-        </tr>
-        
-        <tr>
-            <td>12</td>
-            <td>26.830833</td>
-            <td>92.755478</td>
-            <td>1</td>
-            <td>1</td>
-            <td><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Submit Feedback</a></td>
-        </tr>
-        
-        <tr>
-            <td>13</td>
-            <td>26.853837</td>
-            <td>92.725805</td>
-            <td>6</td>
-            <td>1</td>
-            <td><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=6&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Submit Feedback</a></td>
-        </tr>
-        
-        <tr>
-            <td>14</td>
-            <td>26.796751</td>
-            <td>92.72893</td>
-            <td>1</td>
-            <td>1</td>
-            <td><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Submit Feedback</a></td>
-        </tr>
-        
-        <tr>
-            <td>15</td>
-            <td>26.795344</td>
-            <td>92.725883</td>
-            <td>1</td>
-            <td>1</td>
-            <td><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Submit Feedback</a></td>
-        </tr>
-        </table></div>
-    
-            <div class="folium-map" id="map_9f502c231f456f908417228eaa2d7167" ></div>
+            <div class="folium-map" id="map_d28c191c585c7fee7a1ef5ca1d0818ec" ></div>
         
 </body>
 <script>
     
     
-            var map_9f502c231f456f908417228eaa2d7167 = L.map(
-                "map_9f502c231f456f908417228eaa2d7167",
+            var map_d28c191c585c7fee7a1ef5ca1d0818ec = L.map(
+                "map_d28c191c585c7fee7a1ef5ca1d0818ec",
                 {
                     center: [26.858683200000005, 92.76739466666666],
                     crs: L.CRS.EPSG3857,
                     ...{
-  "zoom": 12,
+  "zoom": 10,
   "zoomControl": true,
   "preferCanvas": false,
 }
@@ -221,7 +95,7 @@
 
         
     
-            var tile_layer_740f17f39b0d5a1e212d2d60230d52a6 = L.tileLayer(
+            var tile_layer_60f310083051acec5e22e3cc1ead438f = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -238,517 +112,599 @@
             );
         
     
-            tile_layer_740f17f39b0d5a1e212d2d60230d52a6.addTo(map_9f502c231f456f908417228eaa2d7167);
+            tile_layer_60f310083051acec5e22e3cc1ead438f.addTo(map_d28c191c585c7fee7a1ef5ca1d0818ec);
         
     
-            var marker_f2fe3ceab35818edb40e3df5e3dcffca = L.marker(
+            var marker_cluster_b203048c0111b87ac9b046088266fa13 = L.markerClusterGroup(
+                {
+}
+            );
+        
+    
+            var circle_marker_f1dbed278a579ffee14632fa2abbd6c8 = L.circleMarker(
                 [26.923833, 92.827491],
-                {
-}
-            ).addTo(map_9f502c231f456f908417228eaa2d7167);
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b203048c0111b87ac9b046088266fa13);
         
     
-        var popup_52d969f172198e8fec2898cdad8a0da8 = L.popup({
-  "maxWidth": 400,
+        var popup_e3f439e8b2b7cdc4649f3f628d0bb524 = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_db4516f06e550927c3e49e7063137a5f = $(`<div id="html_db4516f06e550927c3e49e7063137a5f" style="width: 100.0%; height: 100.0%;"><b>Predicted Count:</b> 2<br><b>Probability:</b> 1<br><b>Lat, Lon:</b> 26.923833, 92.827491<br><br><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=2&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Open Verification Form (prefilled)</a></div>`)[0];
-                popup_52d969f172198e8fec2898cdad8a0da8.setContent(html_db4516f06e550927c3e49e7063137a5f);
+                var html_29ce283522ca3cc3afe1a286ce26eb9f = $(`<div id="html_29ce283522ca3cc3afe1a286ce26eb9f" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 2<br><b>Probability:</b> 64.1%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
+                popup_e3f439e8b2b7cdc4649f3f628d0bb524.setContent(html_29ce283522ca3cc3afe1a286ce26eb9f);
             
         
 
-        marker_f2fe3ceab35818edb40e3df5e3dcffca.bindPopup(popup_52d969f172198e8fec2898cdad8a0da8)
+        circle_marker_f1dbed278a579ffee14632fa2abbd6c8.bindPopup(popup_e3f439e8b2b7cdc4649f3f628d0bb524)
         ;
 
         
     
     
-            marker_f2fe3ceab35818edb40e3df5e3dcffca.bindTooltip(
-                `<div>
-                     Pred: 2
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var marker_25a1a2b1d13ba19ea817e56a78a504f7 = L.marker(
+            var circle_marker_b042f1909cf94ab7d78d6d20799b9144 = L.circleMarker(
                 [26.92443, 92.827891],
-                {
-}
-            ).addTo(map_9f502c231f456f908417228eaa2d7167);
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b203048c0111b87ac9b046088266fa13);
         
     
-        var popup_9016e9dece9956b6a79cca370876db11 = L.popup({
-  "maxWidth": 400,
+        var popup_b25e07f5a67c51106abb2217301a365b = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_a3bc5255f6feb20ea16838a3a939f7db = $(`<div id="html_a3bc5255f6feb20ea16838a3a939f7db" style="width: 100.0%; height: 100.0%;"><b>Predicted Count:</b> 5<br><b>Probability:</b> 1<br><b>Lat, Lon:</b> 26.92443, 92.827891<br><br><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=5&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Open Verification Form (prefilled)</a></div>`)[0];
-                popup_9016e9dece9956b6a79cca370876db11.setContent(html_a3bc5255f6feb20ea16838a3a939f7db);
+                var html_9a024a1cd8d7ce50b55e92d40cef513c = $(`<div id="html_9a024a1cd8d7ce50b55e92d40cef513c" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 5<br><b>Probability:</b> 52.9%<br><b>Risk:</b> 10<br><b>Date:</b> 2025-10-11</div>`)[0];
+                popup_b25e07f5a67c51106abb2217301a365b.setContent(html_9a024a1cd8d7ce50b55e92d40cef513c);
             
         
 
-        marker_25a1a2b1d13ba19ea817e56a78a504f7.bindPopup(popup_9016e9dece9956b6a79cca370876db11)
+        circle_marker_b042f1909cf94ab7d78d6d20799b9144.bindPopup(popup_b25e07f5a67c51106abb2217301a365b)
         ;
 
         
     
     
-            marker_25a1a2b1d13ba19ea817e56a78a504f7.bindTooltip(
-                `<div>
-                     Pred: 5
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var marker_934f3c7a52f7dac73b0096b2b6d91ef8 = L.marker(
+            var circle_marker_fd90be5af29ea1b46b6f2f46879b2ab1 = L.circleMarker(
                 [26.831621, 92.679665],
-                {
-}
-            ).addTo(map_9f502c231f456f908417228eaa2d7167);
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b203048c0111b87ac9b046088266fa13);
         
     
-        var popup_90726ea6c80acdb5aae0db9e6c807626 = L.popup({
-  "maxWidth": 400,
+        var popup_03fc7e988a4098be7dac99de6337ae02 = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_c387e880a0f807c224c3d0a51ddaf326 = $(`<div id="html_c387e880a0f807c224c3d0a51ddaf326" style="width: 100.0%; height: 100.0%;"><b>Predicted Count:</b> 5<br><b>Probability:</b> 1<br><b>Lat, Lon:</b> 26.831621, 92.679665<br><br><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=5&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Open Verification Form (prefilled)</a></div>`)[0];
-                popup_90726ea6c80acdb5aae0db9e6c807626.setContent(html_c387e880a0f807c224c3d0a51ddaf326);
+                var html_899bf0aa4f765f6100c914c68d834fad = $(`<div id="html_899bf0aa4f765f6100c914c68d834fad" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 5<br><b>Probability:</b> 52.9%<br><b>Risk:</b> 10<br><b>Date:</b> 2025-10-11</div>`)[0];
+                popup_03fc7e988a4098be7dac99de6337ae02.setContent(html_899bf0aa4f765f6100c914c68d834fad);
             
         
 
-        marker_934f3c7a52f7dac73b0096b2b6d91ef8.bindPopup(popup_90726ea6c80acdb5aae0db9e6c807626)
+        circle_marker_fd90be5af29ea1b46b6f2f46879b2ab1.bindPopup(popup_03fc7e988a4098be7dac99de6337ae02)
         ;
 
         
     
     
-            marker_934f3c7a52f7dac73b0096b2b6d91ef8.bindTooltip(
-                `<div>
-                     Pred: 5
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var marker_63fd5e3e89455cb468263ab10d6832d1 = L.marker(
+            var circle_marker_de9667cf41e43e3f59a826df4214302c = L.circleMarker(
                 [26.831623, 92.738419],
-                {
-}
-            ).addTo(map_9f502c231f456f908417228eaa2d7167);
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b203048c0111b87ac9b046088266fa13);
         
     
-        var popup_287877ecd9ae84b124a5c6f91e0b7c96 = L.popup({
-  "maxWidth": 400,
+        var popup_50f7d39893deb9fb78b72df1f05341b4 = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_db4d1bb73a46f368c1920a9757ac856e = $(`<div id="html_db4d1bb73a46f368c1920a9757ac856e" style="width: 100.0%; height: 100.0%;"><b>Predicted Count:</b> 1<br><b>Probability:</b> 1<br><b>Lat, Lon:</b> 26.831623, 92.738419<br><br><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Open Verification Form (prefilled)</a></div>`)[0];
-                popup_287877ecd9ae84b124a5c6f91e0b7c96.setContent(html_db4d1bb73a46f368c1920a9757ac856e);
+                var html_84b11d86cbfc135bb30983e1de751bff = $(`<div id="html_84b11d86cbfc135bb30983e1de751bff" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 49.5%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
+                popup_50f7d39893deb9fb78b72df1f05341b4.setContent(html_84b11d86cbfc135bb30983e1de751bff);
             
         
 
-        marker_63fd5e3e89455cb468263ab10d6832d1.bindPopup(popup_287877ecd9ae84b124a5c6f91e0b7c96)
+        circle_marker_de9667cf41e43e3f59a826df4214302c.bindPopup(popup_50f7d39893deb9fb78b72df1f05341b4)
         ;
 
         
     
     
-            marker_63fd5e3e89455cb468263ab10d6832d1.bindTooltip(
-                `<div>
-                     Pred: 1
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var marker_86542f439266263760b4e367291b7b07 = L.marker(
+            var circle_marker_1d96fe3bb6029c76d260d751f73238db = L.circleMarker(
                 [26.778011, 92.76293],
-                {
-}
-            ).addTo(map_9f502c231f456f908417228eaa2d7167);
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b203048c0111b87ac9b046088266fa13);
         
     
-        var popup_762ede794de3d6eb4f0e281626d591d4 = L.popup({
-  "maxWidth": 400,
+        var popup_91671f27862c5add06bb6a8249e966ff = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_e33aa91a33f3de267c92bdb9bdc0ffff = $(`<div id="html_e33aa91a33f3de267c92bdb9bdc0ffff" style="width: 100.0%; height: 100.0%;"><b>Predicted Count:</b> 1<br><b>Probability:</b> 1<br><b>Lat, Lon:</b> 26.778011, 92.76293<br><br><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Open Verification Form (prefilled)</a></div>`)[0];
-                popup_762ede794de3d6eb4f0e281626d591d4.setContent(html_e33aa91a33f3de267c92bdb9bdc0ffff);
+                var html_3d8f34f831a51799edc259ddac05f7b0 = $(`<div id="html_3d8f34f831a51799edc259ddac05f7b0" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 0.0%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
+                popup_91671f27862c5add06bb6a8249e966ff.setContent(html_3d8f34f831a51799edc259ddac05f7b0);
             
         
 
-        marker_86542f439266263760b4e367291b7b07.bindPopup(popup_762ede794de3d6eb4f0e281626d591d4)
+        circle_marker_1d96fe3bb6029c76d260d751f73238db.bindPopup(popup_91671f27862c5add06bb6a8249e966ff)
         ;
 
         
     
     
-            marker_86542f439266263760b4e367291b7b07.bindTooltip(
-                `<div>
-                     Pred: 1
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var marker_bc92a55be3a11fa37b5f9ef3eaa34488 = L.marker(
+            var circle_marker_5e3b74834b7857b6a2ed5d5068a4e684 = L.circleMarker(
                 [26.838061, 92.721425],
-                {
-}
-            ).addTo(map_9f502c231f456f908417228eaa2d7167);
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b203048c0111b87ac9b046088266fa13);
         
     
-        var popup_c08d1814cefe89754103109dc14a2a49 = L.popup({
-  "maxWidth": 400,
+        var popup_804140668e5279f95f501c8a8ab50f92 = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_088784758eaa7821f3af38ae376ae7c2 = $(`<div id="html_088784758eaa7821f3af38ae376ae7c2" style="width: 100.0%; height: 100.0%;"><b>Predicted Count:</b> 1<br><b>Probability:</b> 1<br><b>Lat, Lon:</b> 26.838061, 92.721425<br><br><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Open Verification Form (prefilled)</a></div>`)[0];
-                popup_c08d1814cefe89754103109dc14a2a49.setContent(html_088784758eaa7821f3af38ae376ae7c2);
+                var html_2254b4ccbef4906971be8c074c23133a = $(`<div id="html_2254b4ccbef4906971be8c074c23133a" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 49.5%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
+                popup_804140668e5279f95f501c8a8ab50f92.setContent(html_2254b4ccbef4906971be8c074c23133a);
             
         
 
-        marker_bc92a55be3a11fa37b5f9ef3eaa34488.bindPopup(popup_c08d1814cefe89754103109dc14a2a49)
+        circle_marker_5e3b74834b7857b6a2ed5d5068a4e684.bindPopup(popup_804140668e5279f95f501c8a8ab50f92)
         ;
 
         
     
     
-            marker_bc92a55be3a11fa37b5f9ef3eaa34488.bindTooltip(
-                `<div>
-                     Pred: 1
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var marker_8f9cee0606f21b19dd8d20812fd81b64 = L.marker(
+            var circle_marker_e690aed80386f663e2de2e0a769b9918 = L.circleMarker(
                 [26.92443, 92.827891],
-                {
-}
-            ).addTo(map_9f502c231f456f908417228eaa2d7167);
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b203048c0111b87ac9b046088266fa13);
         
     
-        var popup_41bbb6218f0f7a0976073f796f54a13b = L.popup({
-  "maxWidth": 400,
+        var popup_a32ccb3e5d18065a873c021ec780c99f = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_fc2bc6ce95f67a88f897234ba9e9a058 = $(`<div id="html_fc2bc6ce95f67a88f897234ba9e9a058" style="width: 100.0%; height: 100.0%;"><b>Predicted Count:</b> 1<br><b>Probability:</b> 1<br><b>Lat, Lon:</b> 26.92443, 92.827891<br><br><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Open Verification Form (prefilled)</a></div>`)[0];
-                popup_41bbb6218f0f7a0976073f796f54a13b.setContent(html_fc2bc6ce95f67a88f897234ba9e9a058);
+                var html_5ee7a9f0eab6bc7ea45d4c40d83dbd46 = $(`<div id="html_5ee7a9f0eab6bc7ea45d4c40d83dbd46" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 0.0%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
+                popup_a32ccb3e5d18065a873c021ec780c99f.setContent(html_5ee7a9f0eab6bc7ea45d4c40d83dbd46);
             
         
 
-        marker_8f9cee0606f21b19dd8d20812fd81b64.bindPopup(popup_41bbb6218f0f7a0976073f796f54a13b)
+        circle_marker_e690aed80386f663e2de2e0a769b9918.bindPopup(popup_a32ccb3e5d18065a873c021ec780c99f)
         ;
 
         
     
     
-            marker_8f9cee0606f21b19dd8d20812fd81b64.bindTooltip(
-                `<div>
-                     Pred: 1
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var marker_030a8d99e3f4105a433e442f5eb4a950 = L.marker(
+            var circle_marker_6909493e736493be7c6c7d7f8724e60c = L.circleMarker(
                 [26.861823, 92.767892],
-                {
-}
-            ).addTo(map_9f502c231f456f908417228eaa2d7167);
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b203048c0111b87ac9b046088266fa13);
         
     
-        var popup_27edbbeb0193e5478f46f10276b15cd4 = L.popup({
-  "maxWidth": 400,
+        var popup_09f2b4b179991c98e16d07500a1f4f63 = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_45553c11887702b9f4844e1816085e02 = $(`<div id="html_45553c11887702b9f4844e1816085e02" style="width: 100.0%; height: 100.0%;"><b>Predicted Count:</b> 1<br><b>Probability:</b> 1<br><b>Lat, Lon:</b> 26.861823, 92.767892<br><br><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Open Verification Form (prefilled)</a></div>`)[0];
-                popup_27edbbeb0193e5478f46f10276b15cd4.setContent(html_45553c11887702b9f4844e1816085e02);
+                var html_1bee7ffe99c5010c10aaaafed902698d = $(`<div id="html_1bee7ffe99c5010c10aaaafed902698d" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 77.6%<br><b>Risk:</b> 7<br><b>Date:</b> 2025-10-11</div>`)[0];
+                popup_09f2b4b179991c98e16d07500a1f4f63.setContent(html_1bee7ffe99c5010c10aaaafed902698d);
             
         
 
-        marker_030a8d99e3f4105a433e442f5eb4a950.bindPopup(popup_27edbbeb0193e5478f46f10276b15cd4)
+        circle_marker_6909493e736493be7c6c7d7f8724e60c.bindPopup(popup_09f2b4b179991c98e16d07500a1f4f63)
         ;
 
         
     
     
-            marker_030a8d99e3f4105a433e442f5eb4a950.bindTooltip(
-                `<div>
-                     Pred: 1
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var marker_fc75a24bc7058c6ca332d567cec17968 = L.marker(
+            var circle_marker_7d17500776e5accb78601a7b8aeb03de = L.circleMarker(
                 [26.875783, 92.786516],
-                {
-}
-            ).addTo(map_9f502c231f456f908417228eaa2d7167);
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b203048c0111b87ac9b046088266fa13);
         
     
-        var popup_bbb2008858d53df8ec658f69a5c7486b = L.popup({
-  "maxWidth": 400,
+        var popup_31dd4b1ecb04b78c300fc560250eadf1 = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_70e72ddd2aa7b7ca8081056ee8ad25a6 = $(`<div id="html_70e72ddd2aa7b7ca8081056ee8ad25a6" style="width: 100.0%; height: 100.0%;"><b>Predicted Count:</b> 1<br><b>Probability:</b> 1<br><b>Lat, Lon:</b> 26.875783, 92.786516<br><br><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Open Verification Form (prefilled)</a></div>`)[0];
-                popup_bbb2008858d53df8ec658f69a5c7486b.setContent(html_70e72ddd2aa7b7ca8081056ee8ad25a6);
+                var html_976a8e7d2aae10b1627d28afb3fe253f = $(`<div id="html_976a8e7d2aae10b1627d28afb3fe253f" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 49.5%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
+                popup_31dd4b1ecb04b78c300fc560250eadf1.setContent(html_976a8e7d2aae10b1627d28afb3fe253f);
             
         
 
-        marker_fc75a24bc7058c6ca332d567cec17968.bindPopup(popup_bbb2008858d53df8ec658f69a5c7486b)
+        circle_marker_7d17500776e5accb78601a7b8aeb03de.bindPopup(popup_31dd4b1ecb04b78c300fc560250eadf1)
         ;
 
         
     
     
-            marker_fc75a24bc7058c6ca332d567cec17968.bindTooltip(
-                `<div>
-                     Pred: 1
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var marker_6e0a10ace945467739116b0bfc70f6e2 = L.marker(
+            var circle_marker_8f8d088a43f8ff3c1bc4c67bfee74483 = L.circleMarker(
                 [26.92443, 92.827891],
-                {
-}
-            ).addTo(map_9f502c231f456f908417228eaa2d7167);
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b203048c0111b87ac9b046088266fa13);
         
     
-        var popup_a668005a1325a2ecb24ba1259c5850e9 = L.popup({
-  "maxWidth": 400,
+        var popup_5ee60d88cf374c636a27f24562384bf5 = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_9ab698b315bf8ebe7018837226316c02 = $(`<div id="html_9ab698b315bf8ebe7018837226316c02" style="width: 100.0%; height: 100.0%;"><b>Predicted Count:</b> 1<br><b>Probability:</b> 1<br><b>Lat, Lon:</b> 26.92443, 92.827891<br><br><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Open Verification Form (prefilled)</a></div>`)[0];
-                popup_a668005a1325a2ecb24ba1259c5850e9.setContent(html_9ab698b315bf8ebe7018837226316c02);
+                var html_2047e0e0f9985fae4b8270a29a7ee170 = $(`<div id="html_2047e0e0f9985fae4b8270a29a7ee170" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 0.0%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
+                popup_5ee60d88cf374c636a27f24562384bf5.setContent(html_2047e0e0f9985fae4b8270a29a7ee170);
             
         
 
-        marker_6e0a10ace945467739116b0bfc70f6e2.bindPopup(popup_a668005a1325a2ecb24ba1259c5850e9)
+        circle_marker_8f8d088a43f8ff3c1bc4c67bfee74483.bindPopup(popup_5ee60d88cf374c636a27f24562384bf5)
         ;
 
         
     
     
-            marker_6e0a10ace945467739116b0bfc70f6e2.bindTooltip(
-                `<div>
-                     Pred: 1
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var marker_6b10042351ad84f60d11a93d1a9d98d2 = L.marker(
+            var circle_marker_569f6a423212fa702283bf42c7f9e25a = L.circleMarker(
                 [26.889438, 92.806813],
-                {
-}
-            ).addTo(map_9f502c231f456f908417228eaa2d7167);
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b203048c0111b87ac9b046088266fa13);
         
     
-        var popup_09e3c64ffdfd39c660b3e43ff0f0fd66 = L.popup({
-  "maxWidth": 400,
+        var popup_29929f2d970814889c100686b67d8cd0 = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_cf3bd74077e8268d0edba6479958d412 = $(`<div id="html_cf3bd74077e8268d0edba6479958d412" style="width: 100.0%; height: 100.0%;"><b>Predicted Count:</b> 1<br><b>Probability:</b> 1<br><b>Lat, Lon:</b> 26.889438, 92.806813<br><br><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Open Verification Form (prefilled)</a></div>`)[0];
-                popup_09e3c64ffdfd39c660b3e43ff0f0fd66.setContent(html_cf3bd74077e8268d0edba6479958d412);
+                var html_9e39c846e79d09c163159f70b7076db2 = $(`<div id="html_9e39c846e79d09c163159f70b7076db2" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 0.0%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
+                popup_29929f2d970814889c100686b67d8cd0.setContent(html_9e39c846e79d09c163159f70b7076db2);
             
         
 
-        marker_6b10042351ad84f60d11a93d1a9d98d2.bindPopup(popup_09e3c64ffdfd39c660b3e43ff0f0fd66)
+        circle_marker_569f6a423212fa702283bf42c7f9e25a.bindPopup(popup_29929f2d970814889c100686b67d8cd0)
         ;
 
         
     
     
-            marker_6b10042351ad84f60d11a93d1a9d98d2.bindTooltip(
-                `<div>
-                     Pred: 1
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var marker_a2ab08a2d58c594357950655317228a4 = L.marker(
+            var circle_marker_5d0f6480113cb247e6be4e7642bfd709 = L.circleMarker(
                 [26.830833, 92.755478],
-                {
-}
-            ).addTo(map_9f502c231f456f908417228eaa2d7167);
+                {"bubblingMouseEvents": true, "color": "green", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "green", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b203048c0111b87ac9b046088266fa13);
         
     
-        var popup_1052d4a3620689222d55cd7097931eca = L.popup({
-  "maxWidth": 400,
+        var popup_76ef8a7c395b53be26c6fd35bfcb2768 = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_6b5ef0132d8126f2975f34640217599b = $(`<div id="html_6b5ef0132d8126f2975f34640217599b" style="width: 100.0%; height: 100.0%;"><b>Predicted Count:</b> 1<br><b>Probability:</b> 1<br><b>Lat, Lon:</b> 26.830833, 92.755478<br><br><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Open Verification Form (prefilled)</a></div>`)[0];
-                popup_1052d4a3620689222d55cd7097931eca.setContent(html_6b5ef0132d8126f2975f34640217599b);
+                var html_003d4b66bce6b742b8921d957513a0cc = $(`<div id="html_003d4b66bce6b742b8921d957513a0cc" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 0.0%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
+                popup_76ef8a7c395b53be26c6fd35bfcb2768.setContent(html_003d4b66bce6b742b8921d957513a0cc);
             
         
 
-        marker_a2ab08a2d58c594357950655317228a4.bindPopup(popup_1052d4a3620689222d55cd7097931eca)
+        circle_marker_5d0f6480113cb247e6be4e7642bfd709.bindPopup(popup_76ef8a7c395b53be26c6fd35bfcb2768)
         ;
 
         
     
     
-            marker_a2ab08a2d58c594357950655317228a4.bindTooltip(
-                `<div>
-                     Pred: 1
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var marker_4dd80d43856c976e5282189bf5739eb2 = L.marker(
+            var circle_marker_a4979399ee0181f2fa72dd20a5071346 = L.circleMarker(
                 [26.853837, 92.725805],
-                {
-}
-            ).addTo(map_9f502c231f456f908417228eaa2d7167);
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b203048c0111b87ac9b046088266fa13);
         
     
-        var popup_2a6f3b00295d592efc95399e9e34c562 = L.popup({
-  "maxWidth": 400,
+        var popup_7ec05860b5007b8a50b5a3e4283a572d = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_00c9e18ae09acf628d47d7179df1d31d = $(`<div id="html_00c9e18ae09acf628d47d7179df1d31d" style="width: 100.0%; height: 100.0%;"><b>Predicted Count:</b> 6<br><b>Probability:</b> 1<br><b>Lat, Lon:</b> 26.853837, 92.725805<br><br><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=6&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Open Verification Form (prefilled)</a></div>`)[0];
-                popup_2a6f3b00295d592efc95399e9e34c562.setContent(html_00c9e18ae09acf628d47d7179df1d31d);
+                var html_26e6e7b267159a732fcb11f1eda0c9c1 = $(`<div id="html_26e6e7b267159a732fcb11f1eda0c9c1" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 6<br><b>Probability:</b> 100.0%<br><b>Risk:</b> 12<br><b>Date:</b> 2025-10-11</div>`)[0];
+                popup_7ec05860b5007b8a50b5a3e4283a572d.setContent(html_26e6e7b267159a732fcb11f1eda0c9c1);
             
         
 
-        marker_4dd80d43856c976e5282189bf5739eb2.bindPopup(popup_2a6f3b00295d592efc95399e9e34c562)
+        circle_marker_a4979399ee0181f2fa72dd20a5071346.bindPopup(popup_7ec05860b5007b8a50b5a3e4283a572d)
         ;
 
         
     
     
-            marker_4dd80d43856c976e5282189bf5739eb2.bindTooltip(
-                `<div>
-                     Pred: 6
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var marker_21fd8368225453c915db2a6548ebe955 = L.marker(
+            var circle_marker_caf70d8020c1d982f8a1e268afe12646 = L.circleMarker(
                 [26.796751, 92.72893],
-                {
-}
-            ).addTo(map_9f502c231f456f908417228eaa2d7167);
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b203048c0111b87ac9b046088266fa13);
         
     
-        var popup_e97eb4bed1774d7c186570de55905597 = L.popup({
-  "maxWidth": 400,
+        var popup_17ea4959fdac8bc002f2a5d9fe04c818 = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_c177f4eb30f4b3cfe90c84cc7eb01066 = $(`<div id="html_c177f4eb30f4b3cfe90c84cc7eb01066" style="width: 100.0%; height: 100.0%;"><b>Predicted Count:</b> 1<br><b>Probability:</b> 1<br><b>Lat, Lon:</b> 26.796751, 92.72893<br><br><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Open Verification Form (prefilled)</a></div>`)[0];
-                popup_e97eb4bed1774d7c186570de55905597.setContent(html_c177f4eb30f4b3cfe90c84cc7eb01066);
+                var html_5fb78f2b90f4a1248b41b63993b076ea = $(`<div id="html_5fb78f2b90f4a1248b41b63993b076ea" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 77.6%<br><b>Risk:</b> 7<br><b>Date:</b> 2025-10-11</div>`)[0];
+                popup_17ea4959fdac8bc002f2a5d9fe04c818.setContent(html_5fb78f2b90f4a1248b41b63993b076ea);
             
         
 
-        marker_21fd8368225453c915db2a6548ebe955.bindPopup(popup_e97eb4bed1774d7c186570de55905597)
+        circle_marker_caf70d8020c1d982f8a1e268afe12646.bindPopup(popup_17ea4959fdac8bc002f2a5d9fe04c818)
         ;
 
         
     
     
-            marker_21fd8368225453c915db2a6548ebe955.bindTooltip(
-                `<div>
-                     Pred: 1
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var marker_990335612e4119cfb132dae455d6b003 = L.marker(
+            var circle_marker_8c36aa8fc5d6dd2eb75d44fb67c6e783 = L.circleMarker(
                 [26.795344, 92.725883],
-                {
-}
-            ).addTo(map_9f502c231f456f908417228eaa2d7167);
+                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 6, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_b203048c0111b87ac9b046088266fa13);
         
     
-        var popup_734baadfc3fc197a4242e84c65b319ba = L.popup({
-  "maxWidth": 400,
+        var popup_b83bfdf9302889de939e217e4b67bef8 = L.popup({
+  "maxWidth": "100%",
 });
 
         
             
-                var html_a7a4848715feb14c39abe1b106cd5605 = $(`<div id="html_a7a4848715feb14c39abe1b106cd5605" style="width: 100.0%; height: 100.0%;"><b>Predicted Count:</b> 1<br><b>Probability:</b> 1<br><b>Lat, Lon:</b> 26.795344, 92.725883<br><br><a href='https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?entry.415553779=&entry.1995100821=1&entry.775447943=&entry.1951116157=&usp=pp_url' target='_blank'>Open Verification Form (prefilled)</a></div>`)[0];
-                popup_734baadfc3fc197a4242e84c65b319ba.setContent(html_a7a4848715feb14c39abe1b106cd5605);
+                var html_c2635f117ee090f27f4cc6d7712920f1 = $(`<div id="html_c2635f117ee090f27f4cc6d7712920f1" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 49.5%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
+                popup_b83bfdf9302889de939e217e4b67bef8.setContent(html_c2635f117ee090f27f4cc6d7712920f1);
             
         
 
-        marker_990335612e4119cfb132dae455d6b003.bindPopup(popup_734baadfc3fc197a4242e84c65b319ba)
+        circle_marker_8c36aa8fc5d6dd2eb75d44fb67c6e783.bindPopup(popup_b83bfdf9302889de939e217e4b67bef8)
         ;
 
         
     
     
-            marker_990335612e4119cfb132dae455d6b003.bindTooltip(
-                `<div>
-                     Pred: 1
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
+            marker_cluster_b203048c0111b87ac9b046088266fa13.addTo(map_d28c191c585c7fee7a1ef5ca1d0818ec);
         
 </script>
+</html>
+
+<h3>HEC Prediction Table</h3>
+<table id="hecTable" border="1" style="border-collapse: collapse; width: 100%;">
+<thead>
+<tr>
+<th>Date</th>
+<th>Place</th>
+<th>Latitude</th>
+<th>Longitude</th>
+<th>Elephants</th>
+<th>Risk</th>
+<th>Probability (%)</th>
+<th>Form</th>
+</tr>
+</thead>
+<tbody>
+
+    <tr style="background-color:#ffcc99;" onclick="showPopup(26.923833,92.827491,2,64.1);incrementExplorerBadge();">
+        <td>2025-10-11</td>
+        <td>N/A</td>
+        <td>26.92383</td>
+        <td>92.82749</td>
+        <td>2</td>
+        <td>4</td>
+        <td>64.1</td>
+        <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=Unknown&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=64.1&entry.415553779=Observer" target="_blank" onclick="incrementFormBadge();">Submit</a></td>
+    </tr>
+    
+    <tr style="background-color:#ffcc99;" onclick="showPopup(26.92443,92.827891,5,52.9);incrementExplorerBadge();">
+        <td>2025-10-11</td>
+        <td>N/A</td>
+        <td>26.92443</td>
+        <td>92.82789</td>
+        <td>5</td>
+        <td>10</td>
+        <td>52.9</td>
+        <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=Unknown&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=52.9&entry.415553779=Observer" target="_blank" onclick="incrementFormBadge();">Submit</a></td>
+    </tr>
+    
+    <tr style="background-color:#ffcc99;" onclick="showPopup(26.831621,92.679665,5,52.9);incrementExplorerBadge();">
+        <td>2025-10-11</td>
+        <td>N/A</td>
+        <td>26.83162</td>
+        <td>92.67966</td>
+        <td>5</td>
+        <td>10</td>
+        <td>52.9</td>
+        <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=Unknown&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=52.9&entry.415553779=Observer" target="_blank" onclick="incrementFormBadge();">Submit</a></td>
+    </tr>
+    
+    <tr style="background-color:#ffcc99;" onclick="showPopup(26.831623,92.738419,1,49.5);incrementExplorerBadge();">
+        <td>2025-10-11</td>
+        <td>N/A</td>
+        <td>26.83162</td>
+        <td>92.73842</td>
+        <td>1</td>
+        <td>4</td>
+        <td>49.5</td>
+        <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=Unknown&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=49.5&entry.415553779=Observer" target="_blank" onclick="incrementFormBadge();">Submit</a></td>
+    </tr>
+    
+    <tr style="background-color:#99ff99;" onclick="showPopup(26.778011,92.76293,1,0.0);incrementExplorerBadge();">
+        <td>2025-10-11</td>
+        <td>N/A</td>
+        <td>26.77801</td>
+        <td>92.76293</td>
+        <td>1</td>
+        <td>4</td>
+        <td>0.0</td>
+        <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=Unknown&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=0.0&entry.415553779=Observer" target="_blank" onclick="incrementFormBadge();">Submit</a></td>
+    </tr>
+    
+    <tr style="background-color:#ffcc99;" onclick="showPopup(26.838061,92.721425,1,49.5);incrementExplorerBadge();">
+        <td>2025-10-11</td>
+        <td>N/A</td>
+        <td>26.83806</td>
+        <td>92.72142</td>
+        <td>1</td>
+        <td>4</td>
+        <td>49.5</td>
+        <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=Unknown&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=49.5&entry.415553779=Observer" target="_blank" onclick="incrementFormBadge();">Submit</a></td>
+    </tr>
+    
+    <tr style="background-color:#99ff99;" onclick="showPopup(26.92443,92.827891,1,0.0);incrementExplorerBadge();">
+        <td>2025-10-11</td>
+        <td>N/A</td>
+        <td>26.92443</td>
+        <td>92.82789</td>
+        <td>1</td>
+        <td>4</td>
+        <td>0.0</td>
+        <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=Unknown&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=0.0&entry.415553779=Observer" target="_blank" onclick="incrementFormBadge();">Submit</a></td>
+    </tr>
+    
+    <tr style="background-color:#ff9999;" onclick="showPopup(26.861823,92.767892,1,77.6);incrementExplorerBadge();">
+        <td>2025-10-11</td>
+        <td>N/A</td>
+        <td>26.86182</td>
+        <td>92.76789</td>
+        <td>1</td>
+        <td>7</td>
+        <td>77.6</td>
+        <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=Unknown&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=77.6&entry.415553779=Observer" target="_blank" onclick="incrementFormBadge();">Submit</a></td>
+    </tr>
+    
+    <tr style="background-color:#ffcc99;" onclick="showPopup(26.875783,92.786516,1,49.5);incrementExplorerBadge();">
+        <td>2025-10-11</td>
+        <td>N/A</td>
+        <td>26.87578</td>
+        <td>92.78652</td>
+        <td>1</td>
+        <td>4</td>
+        <td>49.5</td>
+        <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=Unknown&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=49.5&entry.415553779=Observer" target="_blank" onclick="incrementFormBadge();">Submit</a></td>
+    </tr>
+    
+    <tr style="background-color:#99ff99;" onclick="showPopup(26.92443,92.827891,1,0.0);incrementExplorerBadge();">
+        <td>2025-10-11</td>
+        <td>N/A</td>
+        <td>26.92443</td>
+        <td>92.82789</td>
+        <td>1</td>
+        <td>4</td>
+        <td>0.0</td>
+        <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=Unknown&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=0.0&entry.415553779=Observer" target="_blank" onclick="incrementFormBadge();">Submit</a></td>
+    </tr>
+    
+    <tr style="background-color:#99ff99;" onclick="showPopup(26.889438,92.806813,1,0.0);incrementExplorerBadge();">
+        <td>2025-10-11</td>
+        <td>N/A</td>
+        <td>26.88944</td>
+        <td>92.80681</td>
+        <td>1</td>
+        <td>4</td>
+        <td>0.0</td>
+        <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=Unknown&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=0.0&entry.415553779=Observer" target="_blank" onclick="incrementFormBadge();">Submit</a></td>
+    </tr>
+    
+    <tr style="background-color:#99ff99;" onclick="showPopup(26.830833,92.755478,1,0.0);incrementExplorerBadge();">
+        <td>2025-10-11</td>
+        <td>N/A</td>
+        <td>26.83083</td>
+        <td>92.75548</td>
+        <td>1</td>
+        <td>4</td>
+        <td>0.0</td>
+        <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=Unknown&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=0.0&entry.415553779=Observer" target="_blank" onclick="incrementFormBadge();">Submit</a></td>
+    </tr>
+    
+    <tr style="background-color:#ff9999;" onclick="showPopup(26.853837,92.725805,6,100.0);incrementExplorerBadge();">
+        <td>2025-10-11</td>
+        <td>N/A</td>
+        <td>26.85384</td>
+        <td>92.72580</td>
+        <td>6</td>
+        <td>12</td>
+        <td>100.0</td>
+        <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=Unknown&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=100.0&entry.415553779=Observer" target="_blank" onclick="incrementFormBadge();">Submit</a></td>
+    </tr>
+    
+    <tr style="background-color:#ff9999;" onclick="showPopup(26.796751,92.72893,1,77.6);incrementExplorerBadge();">
+        <td>2025-10-11</td>
+        <td>N/A</td>
+        <td>26.79675</td>
+        <td>92.72893</td>
+        <td>1</td>
+        <td>7</td>
+        <td>77.6</td>
+        <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=Unknown&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=77.6&entry.415553779=Observer" target="_blank" onclick="incrementFormBadge();">Submit</a></td>
+    </tr>
+    
+    <tr style="background-color:#ffcc99;" onclick="showPopup(26.795344,92.725883,1,49.5);incrementExplorerBadge();">
+        <td>2025-10-11</td>
+        <td>N/A</td>
+        <td>26.79534</td>
+        <td>92.72588</td>
+        <td>1</td>
+        <td>4</td>
+        <td>49.5</td>
+        <td><a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=Unknown&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=49.5&entry.415553779=Observer" target="_blank" onclick="incrementFormBadge();">Submit</a></td>
+    </tr>
+    </tbody></table>
+
+<script>
+let badgesContainer = document.createElement('div');
+badgesContainer.id = 'badgesContainer';
+badgesContainer.style.margin = '10px';
+document.body.insertBefore(badgesContainer, document.body.firstChild);
+
+function addBadge(name){
+    let badges = JSON.parse(localStorage.getItem('badges')||'[]');
+    if(!badges.includes(name)){
+        badges.push(name);
+        localStorage.setItem('badges', JSON.stringify(badges));
+        let badge = document.createElement('div');
+        badge.className='badge';
+        badge.innerText=name;
+        badge.style.display='inline-block';
+        badge.style.padding='5px 10px';
+        badge.style.margin='5px';
+        badge.style.backgroundColor='#ffd700';
+        badge.style.borderRadius='5px';
+        badgesContainer.appendChild(badge);
+    }
+}
+
+function incrementExplorerBadge(){
+    let count = parseInt(localStorage.getItem('explorerCount')||'0')+1;
+    localStorage.setItem('explorerCount', count);
+    if(count >= 10) addBadge('Explorer');
+}
+
+function incrementFormBadge(){
+    let count = parseInt(localStorage.getItem('formCount')||'0')+1;
+    localStorage.setItem('formCount', count);
+    if(count >= 5) addBadge('Observer');
+}
+
+function incrementRiskRangerBadge(){
+    let count = parseInt(localStorage.getItem('riskCount')||'0')+1;
+    localStorage.setItem('riskCount', count);
+    if(count >= 5) addBadge('Risk Ranger');
+}
+
+let savedBadges = JSON.parse(localStorage.getItem('badges')||'[]');
+savedBadges.forEach(addBadge);
+
+function showPopup(lat, lon, num_ele, prob){
+    map.setView([lat, lon], 12);
+    L.popup()
+     .setLatLng([lat, lon])
+     .setContent(`<b>Elephants:</b> ${num_ele}<br><b>Probability:</b> ${prob.toFixed(1)}%`)
+     .openOn(map);
+}
+</script>
+
+</body>
 </html>
