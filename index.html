@@ -1,35 +1,3 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1"> 
-<title>HEC Dashboard (mobile-friendly)</title>
-<style>
-  body{ font-family: Arial, sans-serif; margin:0; padding:8px; }
-  h2{ margin:6px 0 10px 0; }
-  #map { width:100%; height: 60vh; min-height:320px; }
-  /* badge panel */
-  #badgePanel{ position: fixed; top: 10px; right: 10px; z-index: 10000; background: rgba(255,255,255,0.95);
-               padding:8px; border-radius:8px; box-shadow:0 2px 6px rgba(0,0,0,0.2); max-width:40vw; }
-  #badgesContainer .badge{ display:inline-block; padding:4px 8px; margin:3px; background:#ffd700; border-radius:6px; font-weight:600; font-size:0.9em; }
-  /* responsive table container so mobile shows a horizontal scroller */
-  #table-container { margin-top:12px; }
-  table th, table td { padding:6px 8px; border:1px solid #ddd; text-align:center; }
-  tr.data-row:hover { outline: 2px solid rgba(0,0,0,0.08); }
-  /* small screen tweaks */
-  @media(max-width:600px) {
-    #badgePanel{ max-width:60vw; font-size:0.9em; }
-    table { font-size:0.85em; }
-  }
-</style>
-</head>
-<body>
-<h2>HEC Dashboard — 2025-10-11</h2>
-
-<!-- badge panel -->
-<div id="badgePanel"><strong>My Badges</strong><div id="badgesContainer"></div></div>
-
-<!-- Map HTML injected by Folium; we will replace its inner map container height to be responsive -->
 <!DOCTYPE html>
 <html>
 <head>
@@ -49,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_8090ac80b0962a7f8ef6d6306406bc49 {
+                #map_f6653a4d58e1c49b9f40e8612fa483ba {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -89,32 +57,82 @@
 <body>
     
     
-            <div class="folium-map" id="map_8090ac80b0962a7f8ef6d6306406bc49" ></div>
+    <div id="hec_table_container" style="position: fixed; right: 10px; bottom: 10px; z-index:9999; width: 380px; max-height: 420px; overflow:auto; background:white; padding:10px; border:2px solid gray;">
+      <h4 style="margin:0 0 8px 0;">Top 10 Predicted Points (today)</h4>
+      <table id="hec_table" style="width:100%; border-collapse: collapse; font-size:12px;">
+        <thead>
+          <tr style="background:#f2f2f2;">
+            <th style="padding:4px; text-align:left;">#</th>
+            <th style="padding:4px; text-align:left;">Lat</th>
+            <th style="padding:4px; text-align:left;">Lon</th>
+            <th style="padding:4px; text-align:left;">Prob (%)</th>
+            <th style="padding:4px; text-align:left;">Ele</th>
+          </tr>
+        </thead>
+        <tbody><tr class='tblrow' style='background:red;' data-lat='26.79243426534847' data-lon='92.65013610054308' data-popup='        <div>          <b>Number of Elephants:</b> 5<br>          <b>Risk Probability:</b> 100.00%<br>          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>        </div>        '><td>1</td><td>26.792434</td><td>92.650136</td><td>100.00%</td><td>5</td></tr><tr class='tblrow' style='background:red;' data-lat='26.756434550972855' data-lon='92.70053354627521' data-popup='        <div>          <b>Number of Elephants:</b> 5<br>          <b>Risk Probability:</b> 100.00%<br>          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>        </div>        '><td>2</td><td>26.756435</td><td>92.700534</td><td>100.00%</td><td>5</td></tr><tr class='tblrow' style='background:red;' data-lat='26.83773433780741' data-lon='92.72044923395892' data-popup='        <div>          <b>Number of Elephants:</b> 5<br>          <b>Risk Probability:</b> 100.00%<br>          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>        </div>        '><td>3</td><td>26.837734</td><td>92.720449</td><td>100.00%</td><td>5</td></tr><tr class='tblrow' style='background:red;' data-lat='26.828705636921978' data-lon='92.72047139852914' data-popup='        <div>          <b>Number of Elephants:</b> 5<br>          <b>Risk Probability:</b> 100.00%<br>          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>        </div>        '><td>4</td><td>26.828706</td><td>92.720471</td><td>100.00%</td><td>5</td></tr><tr class='tblrow' style='background:red;' data-lat='26.819676924496147' data-lon='92.7204935526819' data-popup='        <div>          <b>Number of Elephants:</b> 5<br>          <b>Risk Probability:</b> 100.00%<br>          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>        </div>        '><td>5</td><td>26.819677</td><td>92.720494</td><td>100.00%</td><td>5</td></tr><tr class='tblrow' style='background:red;' data-lat='26.801619465033973' data-lon='92.72053782974929' data-popup='        <div>          <b>Number of Elephants:</b> 5<br>          <b>Risk Probability:</b> 100.00%<br>          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>        </div>        '><td>6</td><td>26.801619</td><td>92.720538</td><td>100.00%</td><td>5</td></tr><tr class='tblrow' style='background:red;' data-lat='26.79259071800294' data-lon='92.72055995267102' data-popup='        <div>          <b>Number of Elephants:</b> 5<br>          <b>Risk Probability:</b> 100.00%<br>          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>        </div>        '><td>7</td><td>26.792591</td><td>92.720560</td><td>100.00%</td><td>5</td></tr><tr class='tblrow' style='background:red;' data-lat='26.756475614608156' data-lon='92.7206483403611' data-popup='        <div>          <b>Number of Elephants:</b> 5<br>          <b>Risk Probability:</b> 100.00%<br>          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>        </div>        '><td>8</td><td>26.756476</td><td>92.720648</td><td>100.00%</td><td>5</td></tr><tr class='tblrow' style='background:red;' data-lat='26.747446809955118' data-lon='92.72067041130212' data-popup='        <div>          <b>Number of Elephants:</b> 5<br>          <b>Risk Probability:</b> 100.00%<br>          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>        </div>        '><td>9</td><td>26.747447</td><td>92.720670</td><td>100.00%</td><td>5</td></tr><tr class='tblrow' style='background:red;' data-lat='26.84678256474575' data-lon='92.73049243826856' data-popup='        <div>          <b>Number of Elephants:</b> 5<br>          <b>Risk Probability:</b> 100.00%<br>          <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>        </div>        '><td>10</td><td>26.846783</td><td>92.730492</td><td>100.00%</td><td>5</td></tr></tbody>
+      </table>
+      <p style="margin:6px 0 0 0;"><a href="https://github.com/your-repo-link" target="_blank">GitHub</a> • <a href="D:\HEC_Project\data\today_predictions_20251012.csv" target="_blank">Download CSV</a></p>
+    </div>
+    
+    
+    <div id="gamify" style="position: fixed; left: 10px; bottom: 10px; z-index:9999; width:260px; background:white; padding:10px; border:2px solid gray;">
+      <h4 style="margin:0 0 8px 0;">Ranger Gamification</h4>
+      <p style="margin:0;">Points: <span id="r_points">0</span></p>
+      <p style="margin:0;">Rank: <span id="r_rank">Newbie Ranger</span></p>
+      <p style="margin:0;">Badges: <span id="r_badges">None</span></p>
+    </div>
+    
+    
+    <script>
+    function zoomOpen(lat, lon, popup_html){
+        setTimeout(function(){
+            window.map.setView([parseFloat(lat), parseFloat(lon)], 15);
+            L.popup({maxWidth:400}).setLatLng([parseFloat(lat), parseFloat(lon)]).setContent(popup_html).openOn(window.map);
+        }, 50);
+    }
+    document.addEventListener("DOMContentLoaded", function(){
+        var points = 0;
+        document.querySelectorAll("#hec_table .tblrow").forEach(function(row){
+            row.style.cursor="pointer";
+            row.onclick=function(){
+                zoomOpen(this.getAttribute("data-lat"), this.getAttribute("data-lon"), this.getAttribute("data-popup"));
+                // Update gamification
+                points += 10;
+                document.getElementById("r_points").innerText = points;
+                if(points >= 50){document.getElementById("r_rank").innerText="Expert Ranger";}
+                if(points >= 100){document.getElementById("r_badges").innerText="Gold Badge";}
+            };
+        });
+    });
+    window.map = window.map || window.L_MAP_INSTANCE || window.map;
+    </script>
+    
+    
+            <div class="folium-map" id="map_f6653a4d58e1c49b9f40e8612fa483ba" ></div>
         
 </body>
 <script>
     
     
-            var map_8090ac80b0962a7f8ef6d6306406bc49 = L.map(
-                "map_8090ac80b0962a7f8ef6d6306406bc49",
+            var map_f6653a4d58e1c49b9f40e8612fa483ba = L.map(
+                "map_f6653a4d58e1c49b9f40e8612fa483ba",
                 {
-                    center: [26.8512205, 92.753778],
+                    center: [26.797990088789277, 92.71249928043403],
                     crs: L.CRS.EPSG3857,
                     ...{
-  "zoom": 8,
+  "zoom": 11,
   "zoomControl": true,
   "preferCanvas": false,
 }
 
                 }
             );
-            L.control.scale().addTo(map_8090ac80b0962a7f8ef6d6306406bc49);
 
             
 
         
     
-            var tile_layer_162317a666ae02282cfc5670ea269d94 = L.tileLayer(
+            var tile_layer_e33b90c2021225de3440f5e3d713304a = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -131,817 +149,246 @@
             );
         
     
-            tile_layer_162317a666ae02282cfc5670ea269d94.addTo(map_8090ac80b0962a7f8ef6d6306406bc49);
+            tile_layer_e33b90c2021225de3440f5e3d713304a.addTo(map_f6653a4d58e1c49b9f40e8612fa483ba);
         
     
-            var marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8 = L.markerClusterGroup(
+            var marker_cluster_c423fca0da95e54e220da0747011d7b0 = L.markerClusterGroup(
                 {
 }
             );
         
     
-            var circle_marker_1199c0cad9a014aaafea65e09faaef06 = L.circleMarker(
-                [26.923833, 92.827491],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.847560901257472, "stroke": true, "weight": 1}
-            ).addTo(marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8);
+            var circle_marker_c4af7b1f46ffe828df9adc463fe6a2e2 = L.circleMarker(
+                [26.79243426534847, 92.65013610054308],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c423fca0da95e54e220da0747011d7b0);
         
     
-        var popup_71f2a689e944c96fcd3cce6add6baecc = L.popup({
-  "maxWidth": "100%",
+        var popup_fec22e57b837452e0f6d937f4ea06d74 = L.popup({
+  "maxWidth": 300,
 });
 
         
             
-                var html_428e63339becae1b237f1b0c38f0e48b = $(`<div id="html_428e63339becae1b237f1b0c38f0e48b" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 2<br><b>Probability:</b> 64.1%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
-                popup_71f2a689e944c96fcd3cce6add6baecc.setContent(html_428e63339becae1b237f1b0c38f0e48b);
+                var html_fc9406495c90689f695af81ada9d6cc5 = $(`<div id="html_fc9406495c90689f695af81ada9d6cc5" style="width: 100.0%; height: 100.0%;">         <div>           <b>Number of Elephants:</b> 5<br>           <b>Risk Probability:</b> 100.00%<br>           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>         </div>         </div>`)[0];
+                popup_fec22e57b837452e0f6d937f4ea06d74.setContent(html_fc9406495c90689f695af81ada9d6cc5);
             
         
 
-        circle_marker_1199c0cad9a014aaafea65e09faaef06.bindPopup(popup_71f2a689e944c96fcd3cce6add6baecc)
+        circle_marker_c4af7b1f46ffe828df9adc463fe6a2e2.bindPopup(popup_fec22e57b837452e0f6d937f4ea06d74)
         ;
 
         
     
     
-            circle_marker_1199c0cad9a014aaafea65e09faaef06.bindTooltip(
-                `<div>
-                     4 — 64.1%
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
+            var circle_marker_50cb7d6d5c5c4632987ea228b005633f = L.circleMarker(
+                [26.756434550972855, 92.70053354627521],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c423fca0da95e54e220da0747011d7b0);
         
     
-            var circle_marker_b9207034491968667a1cf518681a012c = L.circleMarker(
-                [26.92443, 92.827891],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.171774820550525, "stroke": true, "weight": 1}
-            ).addTo(marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8);
-        
-    
-        var popup_69cb015ebdb7b35f35db20e69c5c1aee = L.popup({
-  "maxWidth": "100%",
+        var popup_fe309a002c6093df5f5bbabd947a9243 = L.popup({
+  "maxWidth": 300,
 });
 
         
             
-                var html_61eb13048722b44b3437d5765cdf7ca5 = $(`<div id="html_61eb13048722b44b3437d5765cdf7ca5" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 5<br><b>Probability:</b> 52.9%<br><b>Risk:</b> 10<br><b>Date:</b> 2025-10-11</div>`)[0];
-                popup_69cb015ebdb7b35f35db20e69c5c1aee.setContent(html_61eb13048722b44b3437d5765cdf7ca5);
+                var html_a135f2404504af4241009139601d1160 = $(`<div id="html_a135f2404504af4241009139601d1160" style="width: 100.0%; height: 100.0%;">         <div>           <b>Number of Elephants:</b> 5<br>           <b>Risk Probability:</b> 100.00%<br>           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>         </div>         </div>`)[0];
+                popup_fe309a002c6093df5f5bbabd947a9243.setContent(html_a135f2404504af4241009139601d1160);
             
         
 
-        circle_marker_b9207034491968667a1cf518681a012c.bindPopup(popup_69cb015ebdb7b35f35db20e69c5c1aee)
+        circle_marker_50cb7d6d5c5c4632987ea228b005633f.bindPopup(popup_fe309a002c6093df5f5bbabd947a9243)
         ;
 
         
     
     
-            circle_marker_b9207034491968667a1cf518681a012c.bindTooltip(
-                `<div>
-                     10 — 52.9%
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
+            var circle_marker_379cbdf78c27bd92c21db7947aa0f3ea = L.circleMarker(
+                [26.83773433780741, 92.72044923395892],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c423fca0da95e54e220da0747011d7b0);
         
     
-            var circle_marker_d47cd9bcb067213478ff3c5a7197ad14 = L.circleMarker(
-                [26.831621, 92.679665],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 8.171774820550525, "stroke": true, "weight": 1}
-            ).addTo(marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8);
-        
-    
-        var popup_5a445975f18a0bdf629b39c556b5e0ed = L.popup({
-  "maxWidth": "100%",
+        var popup_cff4cd3d4c33a37c5e3033a34a7db350 = L.popup({
+  "maxWidth": 300,
 });
 
         
             
-                var html_9a792704d434d762d059c568b58369bd = $(`<div id="html_9a792704d434d762d059c568b58369bd" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 5<br><b>Probability:</b> 52.9%<br><b>Risk:</b> 10<br><b>Date:</b> 2025-10-11</div>`)[0];
-                popup_5a445975f18a0bdf629b39c556b5e0ed.setContent(html_9a792704d434d762d059c568b58369bd);
+                var html_f8eb617130c860f5a9bc602d3706515a = $(`<div id="html_f8eb617130c860f5a9bc602d3706515a" style="width: 100.0%; height: 100.0%;">         <div>           <b>Number of Elephants:</b> 5<br>           <b>Risk Probability:</b> 100.00%<br>           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>         </div>         </div>`)[0];
+                popup_cff4cd3d4c33a37c5e3033a34a7db350.setContent(html_f8eb617130c860f5a9bc602d3706515a);
             
         
 
-        circle_marker_d47cd9bcb067213478ff3c5a7197ad14.bindPopup(popup_5a445975f18a0bdf629b39c556b5e0ed)
+        circle_marker_379cbdf78c27bd92c21db7947aa0f3ea.bindPopup(popup_cff4cd3d4c33a37c5e3033a34a7db350)
         ;
 
         
     
     
-            circle_marker_d47cd9bcb067213478ff3c5a7197ad14.bindTooltip(
-                `<div>
-                     10 — 52.9%
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
+            var circle_marker_178f0d672776e9332e9bc613c9328935 = L.circleMarker(
+                [26.828705636921978, 92.72047139852914],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c423fca0da95e54e220da0747011d7b0);
         
     
-            var circle_marker_09e26ca83841102aaa4dd60db4d684a3 = L.circleMarker(
-                [26.831623, 92.738419],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.97220599934246, "stroke": true, "weight": 1}
-            ).addTo(marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8);
-        
-    
-        var popup_2989f5d07961f32671b9bc4c07e8af98 = L.popup({
-  "maxWidth": "100%",
+        var popup_8372df1dd6cb9e93f53ca8068e3d30bc = L.popup({
+  "maxWidth": 300,
 });
 
         
             
-                var html_fb13ced49bcd60e365f10724f4c72206 = $(`<div id="html_fb13ced49bcd60e365f10724f4c72206" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 49.5%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
-                popup_2989f5d07961f32671b9bc4c07e8af98.setContent(html_fb13ced49bcd60e365f10724f4c72206);
+                var html_25901a1323364ef18a28ea74fd3a9962 = $(`<div id="html_25901a1323364ef18a28ea74fd3a9962" style="width: 100.0%; height: 100.0%;">         <div>           <b>Number of Elephants:</b> 5<br>           <b>Risk Probability:</b> 100.00%<br>           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>         </div>         </div>`)[0];
+                popup_8372df1dd6cb9e93f53ca8068e3d30bc.setContent(html_25901a1323364ef18a28ea74fd3a9962);
             
         
 
-        circle_marker_09e26ca83841102aaa4dd60db4d684a3.bindPopup(popup_2989f5d07961f32671b9bc4c07e8af98)
+        circle_marker_178f0d672776e9332e9bc613c9328935.bindPopup(popup_8372df1dd6cb9e93f53ca8068e3d30bc)
         ;
 
         
     
     
-            circle_marker_09e26ca83841102aaa4dd60db4d684a3.bindTooltip(
-                `<div>
-                     4 — 49.5%
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
+            var circle_marker_9b64de2aab373488d64dd3a8cceca8a5 = L.circleMarker(
+                [26.819676924496147, 92.7204935526819],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c423fca0da95e54e220da0747011d7b0);
         
     
-            var circle_marker_bd966928fbe9c16eb626a6c48c9a13a7 = L.circleMarker(
-                [26.778011, 92.76293],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
-            ).addTo(marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8);
-        
-    
-        var popup_e6dd385586afe4fd236fb8de2172e57d = L.popup({
-  "maxWidth": "100%",
+        var popup_1adebf9bc090dbe4d649d94c0a5eb2c0 = L.popup({
+  "maxWidth": 300,
 });
 
         
             
-                var html_cb7ef6802ef83bb6e0f99ed786aea524 = $(`<div id="html_cb7ef6802ef83bb6e0f99ed786aea524" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 0.0%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
-                popup_e6dd385586afe4fd236fb8de2172e57d.setContent(html_cb7ef6802ef83bb6e0f99ed786aea524);
+                var html_2d0cbed889a1d5530e156bb543d18c77 = $(`<div id="html_2d0cbed889a1d5530e156bb543d18c77" style="width: 100.0%; height: 100.0%;">         <div>           <b>Number of Elephants:</b> 5<br>           <b>Risk Probability:</b> 100.00%<br>           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>         </div>         </div>`)[0];
+                popup_1adebf9bc090dbe4d649d94c0a5eb2c0.setContent(html_2d0cbed889a1d5530e156bb543d18c77);
             
         
 
-        circle_marker_bd966928fbe9c16eb626a6c48c9a13a7.bindPopup(popup_e6dd385586afe4fd236fb8de2172e57d)
+        circle_marker_9b64de2aab373488d64dd3a8cceca8a5.bindPopup(popup_1adebf9bc090dbe4d649d94c0a5eb2c0)
         ;
 
         
     
     
-            circle_marker_bd966928fbe9c16eb626a6c48c9a13a7.bindTooltip(
-                `<div>
-                     4 — 0.0%
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
+            var circle_marker_d183ed36fe733a67859ca5b43160f1e2 = L.circleMarker(
+                [26.801619465033973, 92.72053782974929],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c423fca0da95e54e220da0747011d7b0);
         
     
-            var circle_marker_957a68abe2d6f4739c56c2e0be38a2bd = L.circleMarker(
-                [26.838061, 92.721425],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.97220599934246, "stroke": true, "weight": 1}
-            ).addTo(marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8);
-        
-    
-        var popup_821cde6a054e4eb49bef6d326f105eae = L.popup({
-  "maxWidth": "100%",
+        var popup_4dd240faf531edd9364aeade8ea01e49 = L.popup({
+  "maxWidth": 300,
 });
 
         
             
-                var html_18e1fc42123bda009ac6b780ada70c4a = $(`<div id="html_18e1fc42123bda009ac6b780ada70c4a" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 49.5%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
-                popup_821cde6a054e4eb49bef6d326f105eae.setContent(html_18e1fc42123bda009ac6b780ada70c4a);
+                var html_73af6c6b4bf0690f2ea6b065b17a1a29 = $(`<div id="html_73af6c6b4bf0690f2ea6b065b17a1a29" style="width: 100.0%; height: 100.0%;">         <div>           <b>Number of Elephants:</b> 5<br>           <b>Risk Probability:</b> 100.00%<br>           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>         </div>         </div>`)[0];
+                popup_4dd240faf531edd9364aeade8ea01e49.setContent(html_73af6c6b4bf0690f2ea6b065b17a1a29);
             
         
 
-        circle_marker_957a68abe2d6f4739c56c2e0be38a2bd.bindPopup(popup_821cde6a054e4eb49bef6d326f105eae)
+        circle_marker_d183ed36fe733a67859ca5b43160f1e2.bindPopup(popup_4dd240faf531edd9364aeade8ea01e49)
         ;
 
         
     
     
-            circle_marker_957a68abe2d6f4739c56c2e0be38a2bd.bindTooltip(
-                `<div>
-                     4 — 49.5%
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
+            var circle_marker_1dd32c7dad7d41b05179960f6727dc90 = L.circleMarker(
+                [26.79259071800294, 92.72055995267102],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c423fca0da95e54e220da0747011d7b0);
         
     
-            var circle_marker_f0cc0fc56f4d71c4534923b110e17d37 = L.circleMarker(
-                [26.92443, 92.827891],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
-            ).addTo(marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8);
-        
-    
-        var popup_5dc13dcc93497a084c7bdd0e7175352a = L.popup({
-  "maxWidth": "100%",
+        var popup_b322489fbb055881ba0b2c6d85f421a6 = L.popup({
+  "maxWidth": 300,
 });
 
         
             
-                var html_754a4a1c3c72b9407ddf253ff3115fb1 = $(`<div id="html_754a4a1c3c72b9407ddf253ff3115fb1" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 0.0%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
-                popup_5dc13dcc93497a084c7bdd0e7175352a.setContent(html_754a4a1c3c72b9407ddf253ff3115fb1);
+                var html_73698de940471b4ad269703280b1b662 = $(`<div id="html_73698de940471b4ad269703280b1b662" style="width: 100.0%; height: 100.0%;">         <div>           <b>Number of Elephants:</b> 5<br>           <b>Risk Probability:</b> 100.00%<br>           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>         </div>         </div>`)[0];
+                popup_b322489fbb055881ba0b2c6d85f421a6.setContent(html_73698de940471b4ad269703280b1b662);
             
         
 
-        circle_marker_f0cc0fc56f4d71c4534923b110e17d37.bindPopup(popup_5dc13dcc93497a084c7bdd0e7175352a)
+        circle_marker_1dd32c7dad7d41b05179960f6727dc90.bindPopup(popup_b322489fbb055881ba0b2c6d85f421a6)
         ;
 
         
     
     
-            circle_marker_f0cc0fc56f4d71c4534923b110e17d37.bindTooltip(
-                `<div>
-                     4 — 0.0%
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
+            var circle_marker_e725e99874cae321bd13200d8ed9f313 = L.circleMarker(
+                [26.756475614608156, 92.7206483403611],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c423fca0da95e54e220da0747011d7b0);
         
     
-            var circle_marker_57bcac157b969f5ee5c5b6e5329f5012 = L.circleMarker(
-                [26.861823, 92.767892],
-                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.658247583933456, "stroke": true, "weight": 1}
-            ).addTo(marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8);
-        
-    
-        var popup_2c67f1cc37215bdd88bc4e8b59424a37 = L.popup({
-  "maxWidth": "100%",
+        var popup_9cd7b0863d45e68f7881981332d3499b = L.popup({
+  "maxWidth": 300,
 });
 
         
             
-                var html_0390bc2f7e8f470e4db44498acd245c7 = $(`<div id="html_0390bc2f7e8f470e4db44498acd245c7" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 77.6%<br><b>Risk:</b> 7<br><b>Date:</b> 2025-10-11</div>`)[0];
-                popup_2c67f1cc37215bdd88bc4e8b59424a37.setContent(html_0390bc2f7e8f470e4db44498acd245c7);
+                var html_4e551a4b109a339ebdf2c7ec430c09dc = $(`<div id="html_4e551a4b109a339ebdf2c7ec430c09dc" style="width: 100.0%; height: 100.0%;">         <div>           <b>Number of Elephants:</b> 5<br>           <b>Risk Probability:</b> 100.00%<br>           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>         </div>         </div>`)[0];
+                popup_9cd7b0863d45e68f7881981332d3499b.setContent(html_4e551a4b109a339ebdf2c7ec430c09dc);
             
         
 
-        circle_marker_57bcac157b969f5ee5c5b6e5329f5012.bindPopup(popup_2c67f1cc37215bdd88bc4e8b59424a37)
+        circle_marker_e725e99874cae321bd13200d8ed9f313.bindPopup(popup_9cd7b0863d45e68f7881981332d3499b)
         ;
 
         
     
     
-            circle_marker_57bcac157b969f5ee5c5b6e5329f5012.bindTooltip(
-                `<div>
-                     7 — 77.6%
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
+            var circle_marker_2a0dc9dbd8e6db985514f5c556a0d38b = L.circleMarker(
+                [26.747446809955118, 92.72067041130212],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c423fca0da95e54e220da0747011d7b0);
         
     
-            var circle_marker_88969c3d710795587c382daf055df95a = L.circleMarker(
-                [26.875783, 92.786516],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.97220599934246, "stroke": true, "weight": 1}
-            ).addTo(marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8);
-        
-    
-        var popup_04771aac3a5fc75666a817ed375a8c5a = L.popup({
-  "maxWidth": "100%",
+        var popup_36b88c27647d480341bb356335d7aab2 = L.popup({
+  "maxWidth": 300,
 });
 
         
             
-                var html_1b937fe9723dfcb60612df60e009abe7 = $(`<div id="html_1b937fe9723dfcb60612df60e009abe7" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 49.5%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
-                popup_04771aac3a5fc75666a817ed375a8c5a.setContent(html_1b937fe9723dfcb60612df60e009abe7);
+                var html_cdfa83d1ce318f6bf6dcfc49d1465387 = $(`<div id="html_cdfa83d1ce318f6bf6dcfc49d1465387" style="width: 100.0%; height: 100.0%;">         <div>           <b>Number of Elephants:</b> 5<br>           <b>Risk Probability:</b> 100.00%<br>           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>         </div>         </div>`)[0];
+                popup_36b88c27647d480341bb356335d7aab2.setContent(html_cdfa83d1ce318f6bf6dcfc49d1465387);
             
         
 
-        circle_marker_88969c3d710795587c382daf055df95a.bindPopup(popup_04771aac3a5fc75666a817ed375a8c5a)
+        circle_marker_2a0dc9dbd8e6db985514f5c556a0d38b.bindPopup(popup_36b88c27647d480341bb356335d7aab2)
         ;
 
         
     
     
-            circle_marker_88969c3d710795587c382daf055df95a.bindTooltip(
-                `<div>
-                     4 — 49.5%
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
+            var circle_marker_8ed6f1e0379626f82d4be5a03e9bf795 = L.circleMarker(
+                [26.84678256474575, 92.73049243826856],
+                {"bubblingMouseEvents": true, "color": "red", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "red", "fillOpacity": 0.8, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7, "stroke": true, "weight": 3}
+            ).addTo(marker_cluster_c423fca0da95e54e220da0747011d7b0);
         
     
-            var circle_marker_e15886982d14e0e10ef7e8751869939a = L.circleMarker(
-                [26.92443, 92.827891],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
-            ).addTo(marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8);
-        
-    
-        var popup_2b50ec8643e47483bc294b7657cc72f8 = L.popup({
-  "maxWidth": "100%",
+        var popup_5c02ba666d08a8fcded82f417cb48a27 = L.popup({
+  "maxWidth": 300,
 });
 
         
             
-                var html_bf8a4bc12a73651d72726a806778679e = $(`<div id="html_bf8a4bc12a73651d72726a806778679e" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 0.0%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
-                popup_2b50ec8643e47483bc294b7657cc72f8.setContent(html_bf8a4bc12a73651d72726a806778679e);
+                var html_e8f0e3b962aea827f8b62cec48f00512 = $(`<div id="html_e8f0e3b962aea827f8b62cec48f00512" style="width: 100.0%; height: 100.0%;">         <div>           <b>Number of Elephants:</b> 5<br>           <b>Risk Probability:</b> 100.00%<br>           <a href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=header" target="_blank">Submit Feedback</a>         </div>         </div>`)[0];
+                popup_5c02ba666d08a8fcded82f417cb48a27.setContent(html_e8f0e3b962aea827f8b62cec48f00512);
             
         
 
-        circle_marker_e15886982d14e0e10ef7e8751869939a.bindPopup(popup_2b50ec8643e47483bc294b7657cc72f8)
+        circle_marker_8ed6f1e0379626f82d4be5a03e9bf795.bindPopup(popup_5c02ba666d08a8fcded82f417cb48a27)
         ;
 
         
     
     
-            circle_marker_e15886982d14e0e10ef7e8751869939a.bindTooltip(
-                `<div>
-                     4 — 0.0%
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_ec0090ae8b3aa8047018122d4a10c161 = L.circleMarker(
-                [26.889438, 92.806813],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
-            ).addTo(marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8);
-        
-    
-        var popup_8f0385f93313e826c7dc4d27ecc040ab = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_060ca8eb7d121abf2e7138d16938d7cc = $(`<div id="html_060ca8eb7d121abf2e7138d16938d7cc" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 0.0%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
-                popup_8f0385f93313e826c7dc4d27ecc040ab.setContent(html_060ca8eb7d121abf2e7138d16938d7cc);
-            
-        
-
-        circle_marker_ec0090ae8b3aa8047018122d4a10c161.bindPopup(popup_8f0385f93313e826c7dc4d27ecc040ab)
-        ;
-
-        
-    
-    
-            circle_marker_ec0090ae8b3aa8047018122d4a10c161.bindTooltip(
-                `<div>
-                     4 — 0.0%
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_6dc137296714f15efc27d0a07d736982 = L.circleMarker(
-                [26.830833, 92.755478],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5.0, "stroke": true, "weight": 1}
-            ).addTo(marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8);
-        
-    
-        var popup_813f819b9e19610c9f4a6c028d1e9ef5 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_c192a80d4846ef71674516bb08dc109a = $(`<div id="html_c192a80d4846ef71674516bb08dc109a" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 0.0%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
-                popup_813f819b9e19610c9f4a6c028d1e9ef5.setContent(html_c192a80d4846ef71674516bb08dc109a);
-            
-        
-
-        circle_marker_6dc137296714f15efc27d0a07d736982.bindPopup(popup_813f819b9e19610c9f4a6c028d1e9ef5)
-        ;
-
-        
-    
-    
-            circle_marker_6dc137296714f15efc27d0a07d736982.bindTooltip(
-                `<div>
-                     4 — 0.0%
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_5820a4b5c83a7825169f1c26b80bf632 = L.circleMarker(
-                [26.853837, 92.725805],
-                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 11.0, "stroke": true, "weight": 1}
-            ).addTo(marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8);
-        
-    
-        var popup_c59fa4fab610b8c0fa1c251976215984 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_74152c654534a04a750d902076937a55 = $(`<div id="html_74152c654534a04a750d902076937a55" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 6<br><b>Probability:</b> 100.0%<br><b>Risk:</b> 12<br><b>Date:</b> 2025-10-11</div>`)[0];
-                popup_c59fa4fab610b8c0fa1c251976215984.setContent(html_74152c654534a04a750d902076937a55);
-            
-        
-
-        circle_marker_5820a4b5c83a7825169f1c26b80bf632.bindPopup(popup_c59fa4fab610b8c0fa1c251976215984)
-        ;
-
-        
-    
-    
-            circle_marker_5820a4b5c83a7825169f1c26b80bf632.bindTooltip(
-                `<div>
-                     12 — 100.0%
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_d547fe9a2a2d8ea71d11e533572ed1d4 = L.circleMarker(
-                [26.796751, 92.72893],
-                {"bubblingMouseEvents": true, "color": "orange", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "orange", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 9.658247583933456, "stroke": true, "weight": 1}
-            ).addTo(marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8);
-        
-    
-        var popup_2e867b25df8ff4ce0726126bc67efb5e = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_0fef879123246c9ef6bef0a47598c72b = $(`<div id="html_0fef879123246c9ef6bef0a47598c72b" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 77.6%<br><b>Risk:</b> 7<br><b>Date:</b> 2025-10-11</div>`)[0];
-                popup_2e867b25df8ff4ce0726126bc67efb5e.setContent(html_0fef879123246c9ef6bef0a47598c72b);
-            
-        
-
-        circle_marker_d547fe9a2a2d8ea71d11e533572ed1d4.bindPopup(popup_2e867b25df8ff4ce0726126bc67efb5e)
-        ;
-
-        
-    
-    
-            circle_marker_d547fe9a2a2d8ea71d11e533572ed1d4.bindTooltip(
-                `<div>
-                     7 — 77.6%
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            var circle_marker_02a364c49970ab5a9d5c781f74735a0a = L.circleMarker(
-                [26.795344, 92.725883],
-                {"bubblingMouseEvents": true, "color": "blue", "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "blue", "fillOpacity": 0.85, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 7.97220599934246, "stroke": true, "weight": 1}
-            ).addTo(marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8);
-        
-    
-        var popup_39d4204b4ae6538c1019b00d6a137a72 = L.popup({
-  "maxWidth": "100%",
-});
-
-        
-            
-                var html_6c69cd59a7816c4e70e4c41b0c0a44f4 = $(`<div id="html_6c69cd59a7816c4e70e4c41b0c0a44f4" style="width: 100.0%; height: 100.0%;"><b>Place:</b> N/A<br><b>Elephants:</b> 1<br><b>Probability:</b> 49.5%<br><b>Risk:</b> 4<br><b>Date:</b> 2025-10-11</div>`)[0];
-                popup_39d4204b4ae6538c1019b00d6a137a72.setContent(html_6c69cd59a7816c4e70e4c41b0c0a44f4);
-            
-        
-
-        circle_marker_02a364c49970ab5a9d5c781f74735a0a.bindPopup(popup_39d4204b4ae6538c1019b00d6a137a72)
-        ;
-
-        
-    
-    
-            circle_marker_02a364c49970ab5a9d5c781f74735a0a.bindTooltip(
-                `<div>
-                     4 — 49.5%
-                 </div>`,
-                {
-  "sticky": true,
-}
-            );
-        
-    
-            marker_cluster_1eb01feb8ff112e4f0cb265a40837ea8.addTo(map_8090ac80b0962a7f8ef6d6306406bc49);
-        
-    
-            map_8090ac80b0962a7f8ef6d6306406bc49.fitBounds(
-                [[26.778011, 92.679665], [26.92443, 92.827891]],
-                {}
-            );
+            marker_cluster_c423fca0da95e54e220da0747011d7b0.addTo(map_f6653a4d58e1c49b9f40e8612fa483ba);
         
 </script>
-</html>
-
-<!-- Table below map -->
-
-<div id="table-container" style="width:100%; margin-top:12px;">
-  <h3 style="margin:6px 0">HEC Prediction Table</h3>
-  <div style="overflow:auto; -webkit-overflow-scrolling: touch;">
-    <table id="hecTable" style="border-collapse:collapse; width:100%; min-width:700px;">
-      <thead style="position:sticky; top:0; background:#fff;">
-        <tr>
-          <th>Date</th><th>Place</th><th>Latitude</th><th>Longitude</th><th>Elephants</th><th>Risk</th><th>Probability</th><th>Form</th>
-        </tr>
-      </thead>
-      <tbody>
-        
-    <tr class="data-row" data-lat="26.923833" data-lon="92.827491" data-score="64.1" data-ele="2" style="background:#ffe6cc">
-      <td>2025-10-11</td>
-      <td></td>
-      <td>26.92383</td>
-      <td>92.82749</td>
-      <td>2</td>
-      <td>4</td>
-      <td>64.1%</td>
-      <td><a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=POINT (92.827491 26.923833)&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=64.1&entry.415553779=Observer" target="_blank">Submit</a></td>
-    </tr>
-    
-    <tr class="data-row" data-lat="26.92443" data-lon="92.827891" data-score="52.9" data-ele="5" style="background:#ffe6cc">
-      <td>2025-10-11</td>
-      <td></td>
-      <td>26.92443</td>
-      <td>92.82789</td>
-      <td>5</td>
-      <td>10</td>
-      <td>52.9%</td>
-      <td><a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=POINT (92.827891 26.92443)&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=52.9&entry.415553779=Observer" target="_blank">Submit</a></td>
-    </tr>
-    
-    <tr class="data-row" data-lat="26.831621" data-lon="92.679665" data-score="52.9" data-ele="5" style="background:#ffe6cc">
-      <td>2025-10-11</td>
-      <td></td>
-      <td>26.83162</td>
-      <td>92.67966</td>
-      <td>5</td>
-      <td>10</td>
-      <td>52.9%</td>
-      <td><a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=POINT (92.679665 26.831621)&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=52.9&entry.415553779=Observer" target="_blank">Submit</a></td>
-    </tr>
-    
-    <tr class="data-row" data-lat="26.831623" data-lon="92.738419" data-score="49.5" data-ele="1" style="background:#ffe6cc">
-      <td>2025-10-11</td>
-      <td></td>
-      <td>26.83162</td>
-      <td>92.73842</td>
-      <td>1</td>
-      <td>4</td>
-      <td>49.5%</td>
-      <td><a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=POINT (92.738419 26.831623)&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=49.5&entry.415553779=Observer" target="_blank">Submit</a></td>
-    </tr>
-    
-    <tr class="data-row" data-lat="26.778011" data-lon="92.76293" data-score="0.0" data-ele="1" style="background:#ccffcc">
-      <td>2025-10-11</td>
-      <td></td>
-      <td>26.77801</td>
-      <td>92.76293</td>
-      <td>1</td>
-      <td>4</td>
-      <td>0.0%</td>
-      <td><a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=POINT (92.76293 26.778011)&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=0.0&entry.415553779=Observer" target="_blank">Submit</a></td>
-    </tr>
-    
-    <tr class="data-row" data-lat="26.838061" data-lon="92.721425" data-score="49.5" data-ele="1" style="background:#ffe6cc">
-      <td>2025-10-11</td>
-      <td></td>
-      <td>26.83806</td>
-      <td>92.72142</td>
-      <td>1</td>
-      <td>4</td>
-      <td>49.5%</td>
-      <td><a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=POINT (92.721425 26.838061)&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=49.5&entry.415553779=Observer" target="_blank">Submit</a></td>
-    </tr>
-    
-    <tr class="data-row" data-lat="26.92443" data-lon="92.827891" data-score="0.0" data-ele="1" style="background:#ccffcc">
-      <td>2025-10-11</td>
-      <td></td>
-      <td>26.92443</td>
-      <td>92.82789</td>
-      <td>1</td>
-      <td>4</td>
-      <td>0.0%</td>
-      <td><a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=POINT (92.827891 26.92443)&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=0.0&entry.415553779=Observer" target="_blank">Submit</a></td>
-    </tr>
-    
-    <tr class="data-row" data-lat="26.861823" data-lon="92.767892" data-score="77.6" data-ele="1" style="background:#ffcccc">
-      <td>2025-10-11</td>
-      <td></td>
-      <td>26.86182</td>
-      <td>92.76789</td>
-      <td>1</td>
-      <td>7</td>
-      <td>77.6%</td>
-      <td><a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=POINT (92.767892 26.861823)&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=77.6&entry.415553779=Observer" target="_blank">Submit</a></td>
-    </tr>
-    
-    <tr class="data-row" data-lat="26.875783" data-lon="92.786516" data-score="49.5" data-ele="1" style="background:#ffe6cc">
-      <td>2025-10-11</td>
-      <td></td>
-      <td>26.87578</td>
-      <td>92.78652</td>
-      <td>1</td>
-      <td>4</td>
-      <td>49.5%</td>
-      <td><a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=POINT (92.786516 26.875783)&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=49.5&entry.415553779=Observer" target="_blank">Submit</a></td>
-    </tr>
-    
-    <tr class="data-row" data-lat="26.92443" data-lon="92.827891" data-score="0.0" data-ele="1" style="background:#ccffcc">
-      <td>2025-10-11</td>
-      <td></td>
-      <td>26.92443</td>
-      <td>92.82789</td>
-      <td>1</td>
-      <td>4</td>
-      <td>0.0%</td>
-      <td><a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=POINT (92.827891 26.92443)&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=0.0&entry.415553779=Observer" target="_blank">Submit</a></td>
-    </tr>
-    
-    <tr class="data-row" data-lat="26.889438" data-lon="92.806813" data-score="0.0" data-ele="1" style="background:#ccffcc">
-      <td>2025-10-11</td>
-      <td></td>
-      <td>26.88944</td>
-      <td>92.80681</td>
-      <td>1</td>
-      <td>4</td>
-      <td>0.0%</td>
-      <td><a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=POINT (92.806813 26.889438)&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=0.0&entry.415553779=Observer" target="_blank">Submit</a></td>
-    </tr>
-    
-    <tr class="data-row" data-lat="26.830833" data-lon="92.755478" data-score="0.0" data-ele="1" style="background:#ccffcc">
-      <td>2025-10-11</td>
-      <td></td>
-      <td>26.83083</td>
-      <td>92.75548</td>
-      <td>1</td>
-      <td>4</td>
-      <td>0.0%</td>
-      <td><a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=POINT (92.755478 26.830833)&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=0.0&entry.415553779=Observer" target="_blank">Submit</a></td>
-    </tr>
-    
-    <tr class="data-row" data-lat="26.853837" data-lon="92.725805" data-score="100.0" data-ele="6" style="background:#ffcccc">
-      <td>2025-10-11</td>
-      <td></td>
-      <td>26.85384</td>
-      <td>92.72580</td>
-      <td>6</td>
-      <td>12</td>
-      <td>100.0%</td>
-      <td><a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=POINT (92.725805 26.853837)&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=100.0&entry.415553779=Observer" target="_blank">Submit</a></td>
-    </tr>
-    
-    <tr class="data-row" data-lat="26.796751" data-lon="92.72893" data-score="77.6" data-ele="1" style="background:#ffcccc">
-      <td>2025-10-11</td>
-      <td></td>
-      <td>26.79675</td>
-      <td>92.72893</td>
-      <td>1</td>
-      <td>7</td>
-      <td>77.6%</td>
-      <td><a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=POINT (92.72893 26.796751)&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=77.6&entry.415553779=Observer" target="_blank">Submit</a></td>
-    </tr>
-    
-    <tr class="data-row" data-lat="26.795344" data-lon="92.725883" data-score="49.5" data-ele="1" style="background:#ffe6cc">
-      <td>2025-10-11</td>
-      <td></td>
-      <td>26.79534</td>
-      <td>92.72588</td>
-      <td>1</td>
-      <td>4</td>
-      <td>49.5%</td>
-      <td><a class="form-link" href="https://docs.google.com/forms/d/e/1FAIpQLSeGYr5oLB3pVeGOWTfWEcBNpQ1fJ_vPfJDUv8ikROQ0VY5sSA/viewform?usp=pp_url&entry.123456789=POINT (92.725883 26.795344)&entry.775447943=Correct&entry.1951116157=Wrong&entry.1995100821=49.5&entry.415553779=Observer" target="_blank">Submit</a></td>
-    </tr>
-    
-      </tbody>
-    </table>
-  </div>
-</div>
-
-
-<script>
-  // expose folium map var reliably to window.map for all devices
-  try {
-    var _mapvar = map_8090ac80b0962a7f8ef6d6306406bc49;
-    window.map = _mapvar;
-    // ensure the map container fills our CSS height
-    var mapDiv = document.querySelector('div.leaflet-container');
-    if(mapDiv) mapDiv.style.height = '60vh';
-  } catch(e) {
-    console.warn('Could not set global map variable:', e);
-  }
-
-  // Gamification: badges stored in localStorage
-  function addBadge(name) {
-    let badges = JSON.parse(localStorage.getItem('badges') || '[]');
-    if(!badges.includes(name)) {
-      badges.push(name);
-      localStorage.setItem('badges', JSON.stringify(badges));
-      renderBadges();
-    }
-  }
-  function renderBadges() {
-    let container = document.getElementById('badgesContainer');
-    container.innerHTML = '';
-    let badges = JSON.parse(localStorage.getItem('badges') || '[]');
-    badges.forEach(b => {
-      let d = document.createElement('div'); d.className='badge'; d.textContent = b;
-      container.appendChild(d);
-    });
-  }
-  // counters
-  function incCounter(key) {
-    let c = parseInt(localStorage.getItem(key) || '0') + 1;
-    localStorage.setItem(key, c);
-    return c;
-  }
-  function incrementExplorerBadge() {
-    let c = incCounter('explorerCount');
-    if(c >= 10) addBadge('Explorer');
-  }
-  function incrementFormBadge() {
-    let c = incCounter('formCount');
-    if(c >= 5) addBadge('Observer');
-  }
-  function incrementRiskRangerBadge() {
-    let c = incCounter('riskCount');
-    if(c >= 5) addBadge('Risk Ranger');
-  }
-
-  // render existing badges on load
-  renderBadges();
-
-  // Attach touch/click listeners to table rows (works on mobile)
-  function attachRowListeners() {
-    document.querySelectorAll('tr.data-row').forEach(function(tr) {
-      // prevent double-trigger on some mobiles by using a small guard
-      let fired = false;
-      function handle(e) {
-        if(fired) return;
-        fired = true;
-        setTimeout(()=> fired=false, 300);
-        const lat = parseFloat(tr.dataset.lat);
-        const lon = parseFloat(tr.dataset.lon);
-        const score = parseFloat(tr.dataset.score);
-        const num_ele = tr.dataset.ele;
-        // pan & popup
-        if(window.map) {
-          window.map.setView([lat, lon], 12);
-          L.popup().setLatLng([lat, lon]).setContent('<b>Elephants:</b> ' + num_ele + '<br><b>Probability:</b> ' + score.toFixed(1) + '%').openOn(window.map);
-        }
-        incrementExplorerBadge();
-      }
-      // both touchstart and click to support phones and desktops
-      tr.addEventListener('click', handle, false);
-      tr.addEventListener('touchstart', handle, false);
-    });
-  }
-
-  // Form links should increment form badge when clicked (works on touch)
-  document.addEventListener('click', function(e) {
-    if(e.target && e.target.matches && e.target.matches('.form-link')) {
-      incrementFormBadge();
-    }
-  }, false);
-
-  // Attach marker click listeners to count RiskRanger (works on dynamically created markers)
-  function attachMarkerListeners() {
-    if(!window.map) return;
-    window.map.eachLayer(function(layer) {
-      // Leaflet CircleMarker has feature undefined sometimes; check instanceof
-      if(layer instanceof L.CircleMarker) {
-        layer.on('click', function() {
-          // decide if this marker is high-prob (we used orange fill for high)
-          let fill = (layer.options && layer.options.fillColor) ? layer.options.fillColor : '';
-          // Accept 'orange' or 'red' as high-prob markers
-          if(fill === 'orange' || fill === 'red') {
-            incrementRiskRangerBadge();
-          }
-        });
-      }
-    });
-  }
-
-  // Run listeners after DOM loads and give Folium a moment to init
-  document.addEventListener('DOMContentLoaded', function() {
-    // small delay to let folium create map layers on mobile
-    setTimeout(function() {
-      attachRowListeners();
-      attachMarkerListeners();
-    }, 500);
-  });
-</script>
-
-</body>
 </html>
